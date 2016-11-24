@@ -1,0 +1,41 @@
+{
+  "name": "logr-cli-fancy",
+  "version": "0.0.1",
+  "description": "Logr renderer for fancy cli output",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/logr-cli-fancy.git"
+  },
+  "keywords": [
+    "logr",
+    "cli"
+  ],
+  "author": "First+Third <code@firstandthird.com> (http://firstandthird.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/logr-cli-fancy/issues"
+  },
+  "homepage": "https://github.com/firstandthird/logr-cli-fancy#readme",
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "eslint-config-firstandthird": "^3.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "logr": "1.16.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "json-stringify-safe": "^5.0.1",
+    "repeating": "^3.0.0",
+    "string-width": "^2.0.0",
+    "text-table": "^0.2.0"
+  },
+  "eslintConfig": {
+    "extends": "firstandthird"
+  }
+}

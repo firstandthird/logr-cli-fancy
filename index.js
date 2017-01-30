@@ -1,3 +1,4 @@
+'use strict';
 //const textTable = require('text-table');
 const repeating = require('repeating');
 const stringWidth = require('string-width');

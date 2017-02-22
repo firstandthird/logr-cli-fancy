@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/firstandthird/logr-cli-fancy#readme",
   "devDependencies": {
-    "eslint": "^3.10.2",
+    "eslint": "^3.16.1",
     "eslint-config-firstandthird": "^3.1.0",
     "eslint-plugin-import": "^2.2.0",
     "logr": "1.19.0",

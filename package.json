@@ -1,6 +1,6 @@
 {
   "name": "logr-cli-fancy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Logr renderer for fancy cli output",
   "main": "index.js",
   "scripts": {

@@ -2,7 +2,7 @@
 //const textTable = require('text-table');
 const repeating = require('repeating');
 const stringWidth = require('string-width');
-const stringify = require('json-stringify-safe');
+const fmtObj = require('fmt-obj');
 const chalk = require('chalk');
 
 exports.defaults = {
@@ -33,7 +33,14 @@ exports.log = function(options, tags, message) {
   const appWidth = stringWidth(app);
 
   if (typeof message === 'object') {
-    message = stringify(message, null, options.appColumnWidth + 4);
+    const formatter = {
+      property: chalk.bold,
+      punctuation: chalk.cyan,
+      literal: chalk.blue,
+      number: chalk.yellow,
+      string: chalk.green
+    };
+    message = fmtObj(message, Infinity, formatter, options.appColumnWidth + 5);
   }
 
   if (options.color) {

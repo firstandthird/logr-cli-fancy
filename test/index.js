@@ -6,7 +6,7 @@ let lastMessage;
 const logger = function(msg) {
   lastMessage = msg;
   //use for debugging
-  console.log(msg); //eslint-disable-line no-console
+  //console.log(msg); //eslint-disable-line no-console
 };
 
 test('string with no tag', (t) => {
@@ -108,5 +108,5 @@ test('json', (t) => {
     lastName: 'smith',
     age: 100
   });
-  t.equal(lastMessage, '            \x1b[33mapp\x1b[39m\x1b[90m  ::  \x1b[39m{\n          "message": "this is some message",\n          "firstName": "bob",\n          "lastName": "smith",\n          "age": 100\n}');
+  t.equal(lastMessage, '            \x1b[33mapp\x1b[39m\x1b[90m  ::  \x1b[39m\n                      \x1b[1mmessage\x1b[22m\x1b[36m: \x1b[39m\x1b[36m"\x1b[39m\x1b[32mthis is some message\x1b[39m\x1b[36m"\x1b[39m\n                    \x1b[1mfirstName\x1b[22m\x1b[36m: \x1b[39m\x1b[36m"\x1b[39m\x1b[32mbob\x1b[39m\x1b[36m"\x1b[39m\n                     \x1b[1mlastName\x1b[22m\x1b[36m: \x1b[39m\x1b[36m"\x1b[39m\x1b[32msmith\x1b[39m\x1b[36m"\x1b[39m\n                          \x1b[1mage\x1b[22m\x1b[36m: \x1b[39m\x1b[33m100\x1b[39m');
 });

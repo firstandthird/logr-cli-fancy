@@ -49,11 +49,11 @@ exports.log = function(options, tags, message) {
       const color = options.tagColors[tag] ? chalk[options.tagColors[tag]] : chalk[options.tagColor];
       tags[i] = color(tag);
     });
-    options.separator = chalk.dim(options.separator);
+    options.separator = chalk.gray(options.separator);
   }
   let tagString = '';
   if (tags.length !== 0) {
-    tagString = ` [${tags.join(',')}]`;
+    tagString = ` ${chalk.gray('[')}${tags.join(',')}${chalk.gray(']')}`;
   }
   const tagsWidth = stringWidth(tagString);
   let appIndent = options.appColumnWidth - appWidth - tagsWidth;

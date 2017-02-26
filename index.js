@@ -5,7 +5,7 @@ const stringWidth = require('string-width');
 const stringify = require('json-stringify-safe');
 const chalk = require('chalk');
 
-const defaults = {
+exports.defaults = {
   color: true,
   separator: '  ::  ',
   appColumnWidth: 15,
@@ -22,13 +22,12 @@ const availableColors = [
   'yellow',
   'blue',
   'magenta',
-  'cyan'
+  'cyan',
+  'red'
 ];
 let lastColorIndex = 0;
 
-module.exports = function(options, tags, message) {
-  options = Object.assign({}, defaults, options);
-
+exports.log = function(options, tags, message) {
   //first tag is considered the app
   let app = tags.shift() || '';
   const appWidth = stringWidth(app);
